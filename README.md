@@ -7,11 +7,14 @@ A collection of agent skills for Alpheus code styles.
 Install the skills with the [`skills`](https://github.com/vercel-labs/skills) CLI:
 
 ```sh
+# skills
+skills add alpheusagents/codestyles
+
 # npm
-npx skills add alpheusday/codestyles
+npx skills add alpheusagents/codestyles
 
 # pnpm
-pnpm dlx skills add alpheusday/codestyles
+pnpm dlx skills add alpheusagents/codestyles
 ```
 
 ## Skills
