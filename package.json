@@ -3,9 +3,9 @@
     "type": "module",
     "devDependencies": {
         "@apst/oxfmt": "~0.2.0",
-        "@apst/oxlint": "~0.4.0",
+        "@apst/oxlint": "~0.5.0",
         "oxfmt": "~0.70.0",
-        "oxlint": "^1.78.0",
+        "oxlint": "^1.85.0",
         "oxlint-tsgolint": "~7.0.2003"
     }
 }
