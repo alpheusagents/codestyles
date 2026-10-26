@@ -14,12 +14,7 @@ description: Use when writing or editing JavaScript or TypeScript code to enforc
 - annotate every variable, parameter and return type explicitly
 - prefer `type` aliases over `interface`
 - prefer `void 0` over `undefined` wherever it appears as a value
-- end every file with grouped exports in this order:
-
-```ts
-export type {};
-export {};
-```
+- end every file that has named exports with grouped exports, type-only group first
 
 These rules are enforced by the code. Violating the letter is violating the spirit.
 

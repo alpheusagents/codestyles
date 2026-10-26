@@ -33,7 +33,7 @@ Use a single options-object parameter unless it have to follow specific patterns
 
 ## Organization within a file
 
-Files flow top to bottom: imports, then declarations in dependency order, then grouped exports (`export type {}` then `export {}`) always last (see `./imports-exports.md`).
+Files flow top to bottom: imports, then declarations in dependency order, then grouped named exports when present, always last (see `./imports-exports.md`). Keep type-only exports before value exports and omit empty groups. A file with no named exports ends after its declarations. Framework-required inline exports are the exception; keep them where the framework requires them (see `./imports-exports.md`).
 
 Dependency first: a callee appears before its caller. Helpers first, primary function last. All non-exported `const` arrows; the orchestrator calls them.
 
