@@ -14,21 +14,6 @@ use axum::Router;
 use crate::constants::env::get_port;
 ```
 
-### One Crate per `use`
-
-External imports are one crate per `use` statement, alphabetized by crate then by path. Multi-line braces use trailing commas, one item per line.
-
-```rust
-use xxx::{
-    A,
-    b::B,
-    c::{
-        d::D,
-        e::E,
-    },
-};
-```
-
 ### `crate::` Always
 
 Use `crate::` for all intra-crate paths. Never `self::` or `super::` — except `use super::*;` inside `#[cfg(test)] mod tests`, the single allowed exception.
