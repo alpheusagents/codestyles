@@ -2,7 +2,7 @@
 
 ## General
 
-Every function takes a typed `XxxOptions` bag (see `./types.md`) for the `CompleteXxx`/`Xxx` duality used to type option bags.
+Prefer a typed `XxxOptions` bag (see `./types.md`) so later parameters do not break existing call sites. This is suggested for future-proofing.
 
 ## Arrow Functions Only
 
@@ -27,9 +27,17 @@ const fetchThing = async (): Promise<Thing> => {
 };
 ```
 
-## Single Options-object Parameter
+## Single Options-object Parameter (Suggested)
 
-Use a single options-object parameter unless it have to follow specific patterns.
+Prefer a single typed options-object parameter. Use it when the function is public, takes several related arguments, or may gain parameters later. Positional parameters are fine for small, stable internal helpers and when a framework or existing API requires a fixed signature.
+
+```ts
+// ✓ suggested when the function may grow
+const createReport = (options: ReportOptions): Report => {};
+
+// ✓ fine for a small, stable helper
+const add = (a: number, b: number): number => a + b;
+```
 
 ## Organization within a file
 

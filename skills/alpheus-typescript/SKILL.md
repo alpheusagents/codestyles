@@ -8,15 +8,13 @@ description: Use when writing or editing JavaScript or TypeScript code to enforc
 ## Overview
 
 - prefer functional programming
-- prefer arrow functions with a single options-object parameter
+- prefer arrow functions, and prefer a single typed options-object parameter (suggested)
 - prefer `createX` naming for factory functions
 - prefer return explicitly typed object from functions
 - annotate every variable, parameter and return type explicitly
 - prefer `type` aliases over `interface`
 - prefer `void 0` over `undefined` wherever it appears as a value
 - end every file that has named exports with grouped exports, type-only group first
-
-These rules are enforced by the code. Violating the letter is violating the spirit.
 
 ## When to Use
 
