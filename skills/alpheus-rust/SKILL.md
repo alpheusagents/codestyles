@@ -10,6 +10,7 @@ description: Use when writing or editing Rust code to enforce Alpheus coding sty
 - use snake_case directories and files; `mod.rs` in every directory-module
 - imports grouped `std` → external → `crate::`, one crate per `use`, blank-line separated
 - use `crate::` for all intra-crate paths, never `self::` or `super::` (except `use super::*;` in inline `#[cfg(test)] mod tests`)
+- use only `pub` and `pub(crate)` for visibility; avoid other `pub(...)` forms
 - prefer to annotate every local explicitly, even when inferable
 - prefer a separate test workspace member; inline `#[cfg(test)] mod tests` allowed per repo
 - `.unwrap()` only in tests, avoid in fallible library code
